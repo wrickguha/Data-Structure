@@ -6,8 +6,8 @@ public class Stack {
     int top,item;
 
     Stack(int size){
-        stack = new int[size];
-        top=-1;
+        this.stack = new int[size];
+        this.top=-1;
     }
 
     void push()
