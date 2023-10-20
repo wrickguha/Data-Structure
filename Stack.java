@@ -3,10 +3,11 @@ import java.util.Scanner;
 public class Stack {
     int size;
     int[] stack;
-    int top=0,item;
+    int top,item;
 
     Stack(int size){
-        stack=new int[size];
+        stack = new int[size];
+        top=-1;
     }
 
     void push()
