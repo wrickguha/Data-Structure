@@ -3,12 +3,13 @@ import java.util.Scanner;
 public class Stack {
     int size;
     int[] stack;
+    int top=0,item;
 
     Stack(int size){
         stack=new int[size];
     }
 
-    void push(int top,int item)
+    void push()
     {
         if(top==size-1)
         {
@@ -26,7 +27,7 @@ public class Stack {
             sc1.close();
         }
     }
-    void pop(int size,int top,int item)
+    void pop()
     {
         if(top==-1)
         {
@@ -56,26 +57,25 @@ public class Stack {
         }
     }
     public static void main(String[] args) {
-        Stack obj = new Stack();
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the size of the stack: ");
         int size = sc.nextInt();
-        int top,item;
         Stack stack = new Stack(size);
         int ch;
         do{
+            System.out.println("1.\tPUSH\n2.\tPOP\n3.\tDISPLAY\n4.\tEXIT\n");
             System.out.println("Enter the choice: ");
             ch=sc.nextInt();
             switch(ch)
             {
                 case 1:
-                obj.push();
+                stack.push();
                 break;
                 case 2:
-                obj.pop();
+                stack.pop();
                 break;
                 case 3:
-                obj.display();
+                stack.display();
                 break;
                 case 4:
                 System.exit (0);
