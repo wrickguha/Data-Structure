@@ -2,15 +2,17 @@ import java.util.Scanner;
 
 class Binary_Search{
 
-void Binary(int[] arr,int target,int size)
+void Binary(int[] arr,int size,int target)
 {
-    int beg=0,end=size-1,mid=(beg+end)/2;
+    int beg=0;
+    int end=size-1;
+    int mid=(beg+end)/2;
     for(int i=0;i<size;i++)
     {
         if(arr[mid]==target)
         {
             System.out.println("The target is found");
-            
+            return;
         }
         else if(arr[mid]>target)
         {
@@ -24,6 +26,7 @@ void Binary(int[] arr,int target,int size)
         }
     }
     System.out.println("The element is not found");
+
 }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
