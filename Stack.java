@@ -5,9 +5,10 @@ public class Stack {
     int stack[];
     int item,top;
     Stack(int size){
-        this.top=0;
+        this.size=size;
         this.stack= new int[size];
-    }
+        this.top=-1;
+       }
     void push()
     {
         if(top==size-1)
