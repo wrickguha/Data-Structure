@@ -2,19 +2,17 @@ import java.util.Scanner;
 
 public class Stack {
     int size;
-    int[] stack;
-    int top,item;
-
+    int stack[];
+    int item,top;
     Stack(int size){
-        this.stack = new int[size];
-        this.top=-1;
+        this.top=0;
+        this.stack= new int[size];
     }
-
     void push()
     {
         if(top==size-1)
         {
-            System.out.println("The Stack is full");
+            System.out.println("The stack is full");
             return;
         }
         else
@@ -22,9 +20,9 @@ public class Stack {
             Scanner sc1= new Scanner(System.in);
             System.out.println("Enter the item: ");
             item=sc1.nextInt();
-            top++;
             stack[top]=item;
-            System.out.println("Item Inserted: "+item);
+            top++;
+            System.out.println("Item Inserted");
             sc1.close();
         }
     }
@@ -32,21 +30,21 @@ public class Stack {
     {
         if(top==-1)
         {
-            System.out.println("The Stack is empty");
+            System.out.println("The stack is empty");
             return;
         }
         else
         {
-            item=stack[top];
             top--;
-            System.out.println("Item Deleted");
+            item=stack[top];
+            System.out.println("Item deleted");
         }
     }
     void display()
     {
         if(top==-1)
         {
-            System.out.println("The Stack is empty");
+            System.out.println("the stack is empty");
             return;
         }
         else
@@ -57,12 +55,13 @@ public class Stack {
             }
         }
     }
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the size of the stack: ");
-        int size = sc.nextInt();
-        Stack stack = new Stack(size);
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the size: ");
+        int size= sc.nextInt();
         int ch;
+        Stack stack = new Stack(size);
         do{
             System.out.println("1.\tPUSH\n2.\tPOP\n3.\tDISPLAY\n4.\tEXIT\n");
             System.out.println("Enter the choice: ");
@@ -79,9 +78,10 @@ public class Stack {
                 stack.display();
                 break;
                 case 4:
-                System.exit (0);
+                System.exit(0);
                 default:
-                System.out.println("Invalid Input. Try Again!");
+                System.out.println("Invalid input! Try again");
+                break;
             }
         }while(ch!=4);
         sc.close();
