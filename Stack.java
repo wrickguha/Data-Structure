@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Stack {
     int size,item;
-    int stack[];
+    int[] stack;
     int top=-1;
     void stack(int size)
     {
@@ -11,7 +11,7 @@ public class Stack {
     }
         void push()
         {
-            if(top==size-1)
+            if(top>=size-1)
             {
                 System.out.println("The stack is full");
                 return;
@@ -45,7 +45,7 @@ public class Stack {
         {
             if(top==-1)
             {
-                System.out.println("The stack is empyt");
+                System.out.println("The stack is empty");
                 return;
             }
             else
@@ -60,7 +60,7 @@ public class Stack {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the size: ");
         int size=sc.nextInt();
-        Stack stack = new Stack();
+        Stack stack = new Stack(size);
         int ch;
         do{
             System.out.println("1.\tPUSH\n2.\tPOP\n3.\tDISPLAY\n4.\tEXIT\n");
