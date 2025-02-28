@@ -7,7 +7,7 @@ public class Linear_Search {
         {
             if(arr[i]==target)
             {
-                System.out.println("The item is found");
+                System.out.println("The item is found"+i);
                 return;
             }
         }
