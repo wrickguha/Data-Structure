@@ -90,7 +90,7 @@ if __name__ == '__main__':
     ll.insert_values(['banana','mango','grapes','orange'])
     ll.print()
     ll.remove_at(2)
-    print("Length: ",ll.get_length())
+    print("Length: ",ll.get_length())  
     ll.insert_at(0,'figs')
     ll.insert_at(2,'guava')
 
