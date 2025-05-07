@@ -76,6 +76,58 @@ root.right = r_right
 root.show()
 """
 
+"""
+
+## Inorder traversal
+
+def print_inorder(root):
+
+    if root:
+        # First Occur on left
+        printInorder(root.left)
+
+        # Then print data of node
+        print(root.val)
+
+        # Now recur on right child
+        printInorder(root.right)
+"""
 
 
+
+"""
+
+# Preorder Traversal
+
+def printPreorder(root):
+
+    if root:
+        # First print the data of node
+        print(root,val)
+
+        # Then recur on left child
+        printPreorder(root.left)
+
+        #Finally recur on right child
+        printPreorder(root.right)
+
+"""
+
+
+"""
+#Post Order Traversal
+
+def printPostorder(root):
+    if root:
+        # First recur on left child
+        printPostorder(root.left)
+
+        # then recur on right child
+        printPostorder(root.right)
+
+        # the data of the node
+        print(root.val)
+
+
+"""
 
